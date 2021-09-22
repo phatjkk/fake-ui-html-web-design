@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet for people</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #logo {
+            width: 150px;
+            height: 30px;
+            float: left;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+
+        #navBar {
+            z-index: 9999;
+            margin-top: -20px;
+            /* margin-left: -20px;
+            margin-right: -20px; */
+            background-color: #fff;
+            position: fixed;
+            width: 100%;
+            padding-top: 40px;
+            overflow: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 0 0 1px 1px rgb(29 17 51 / 4%), 0 0 3px 2px rgb(9 32 77 / 12%), 0 0 2px -3px rgb(29 17 51 / 12%);
+        }
+
+
+        #navBar a {
+
+            float: left;
+            margin-top: 20px;
+            margin-left: 40px;
+
+            padding: 3px 10px;
+
+            box-shadow: 1px;
+        }
+
+        .download {
+            color: #1860DF;
+            width: 160px;
+            height: 35px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #fff;
+            border-radius: 5px;
+            border-color: #1860DF;
+
+        }
+
+        .download:hover {
+            background-color: #1860DF;
+            color: #fff;
+            border: none;
+        }
+
+        .linkhover {
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .linkhover:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        }
+
+        #banner {
+            padding-top: 200px;
+            height: 700px;
+        }
+
+        #bannerText {
+            width: 400px;
+
+            margin-left: 100px;
+
+        }
+        #banner img{
+            margin: -450px 0px 0px 650px;
+        }
+        #title {
+            font-weight: bold;
+            font-size: 70px;
+            margin-bottom: 10px;
+
+        }
+
+        #downloadFirefox {
+            width: 180px;
+            height: 45px;
+            background-color: #0060DF;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 16px;
+            border: #fff;
+        }
+
+        .clear {
+            clear: left;
+        }
+
+        /* div {
+            border-style: solid;
+        } */
+
+        #note {
+            margin-left: 10px;
+        }
+
+        #intro {
+            float: left;
+            width: 780px;
+        }
+
+        #intro img {
+            width: 760px;
+            height: 427px;
+        }
+
+        #newFirefox {
+            width: 364px;
+            height: 364px;
+            float: left;
+        }
+
+        #newFirefox img {
+            width: 364px;
+            height: 364px;
+        }
+
+        #main {
+            margin-left: 50px;
+        }
+
+        .classlistdau {
+            float: left;
+            width: 363px;
+            height: 500px;
+            margin-left: 50px;
+        }
+
+        #hangsau {
+
+            float: left;
+        }
+
+        .classlistdau img {
+            width: 363px;
+            height: 242px;
+        }
+
+        .titleclass {
+            color: #000;
+
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .titleclass:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        }
+
+        #vpnbanner {
+            padding-left: 50px;
+            height: 800px;
+        }
+
+        #logovpn {
+            margin-top: 300px;
+        }
+
+        .downloadVPN {
+            background-color: #000;
+            color: #fff;
+            width: 160px;
+            height: 35px;
+            font-size: 14px;
+            border-radius: 5px;
+            font-weight: bold;
+
+        }
+
+        .downloadVPN:hover {
+
+            color: #000;
+            background-color: #fff;
+
+        }
+
+        #protechImg {
+            margin-top: 200px;
+            margin-right: 100px;
+            float: right;
+        }
+
+        #titlebaner2 {
+            float: left;
+            width: 400px;
+        }
+
+        #banner2 {
+            /* margin-left: -150px; */
+            width: 750px;
+            float: left;
+        }
+
+        #pocimg {
+            margin-top: 150px;
+        }
+
+        .readingnew img {
+            width: 265px;
+            height: 155px;
+            object-fit: cover;
+            object-position: 100% 0;
+        }
+
+        #supportbanner {
+            padding-top: 50px;
+            background-color: #EDEDF0;
+        }
+
+        #supportbanner p {
+            margin-left: 50px;
+            width: 300px;
+            text-align: center;
+        }
+
+        #supportbanner {
+            text-align: center;
+        }
+
+        #powerbanner {
+            padding-top: 50px;
+            background-color: #EDEDF0;
+        }
+
+        #powerbanner p {
+            margin-left: 50px;
+            width: 300px;
+            text-align: center;
+        }
+
+        #powerbanner {
+            text-align: center;
+        }
+
+        #inplove {
+            margin: 100px 0px 100px;
+        }
+
+        #privacybox {
+            padding-top: 150px;
+            background-color: #20123A;
+            color: #fff;
+            height: 460px;
+        }
+        #menubotom{
+            padding: 100px 0px 100px;
+            background-color: #000;
+            color: #fff;
+        }
+        #menubotom a{
+            margin-left: -40px;
+            color: #fff;
+        }
+        #menubotom ul {
+    list-style-type: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="navBar">
+        <img id="logo" src="img/logo.svg" alt="">
+
+        <a href="#" class="linkhover">Firefox Browsers</a>
+        <a href="#" class="linkhover">Products</a>
+        <a href="#" class="linkhover">Who We Are</a>
+        <a href="#" class="linkhover">Innovation</a>
+        <a href="#" style="float: right; margin-right: 100px;"><button class="download">Download Firefox</button></a>
+
+
+    </div>
+    <div id="banner">
+        <div id="bannerText">
+            <p id="title">Fire starts here</p>
+            <button id="downloadFirefox">Download Firefox</button>
+            <p id='note'>Firefox Privacy Notice</p>
+        </div>
+        <img src="img/banner1.png" alt="">
+    </div>
+    <div id="main">
+        <div id="hangdau">
+            <div id="intro">
+                <img src="img/intro1.jpg" alt="">
+                <p>Introducing a new look for Firefox</p>
+                <p>This major redesign gives you a new, wide-open window to the internet with more privacy than ever
+                    before.</p>
+            </div>
+            <div id="newFirefox">
+                <img src="img/newFirefox.jpg" alt="">
+                <p>The new Firefox is here</p>
+                <p>It's fast, efficient and private so you feel safe and free to be yourself online with fewer eyes
+                    following you across the web.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="hangsau">
+            <div class="classlistdau">
+                <img src="img/diffi.jpg" alt="">
+                <p class="titleclass">Things are looking different in 2021</p>
+                <p>While we make small design improvements regularly, major overhauls are big undertakings that don’t
+                    come around all that often.</p>
+            </div>
+            <div class="classlistdau">
+                <img src="img/behind.jpg" alt="">
+                <p class="titleclass">Go behind the design</p>
+                <p>We obsessed over every detail. The result is a fresh, streamlined experience that delivers more
+                    efficiency and privacy than ever before.</p>
+            </div>
+            <div class="classlistdau">
+                <img src="img/enjoy.jpg" alt="">
+                <p class="titleclass">Enjoy being online again</p>
+                <p>It has been a year. Here are some tips for how to reset and choose joy when online.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div id="vpnbanner">
+            <img id="protechImg" src="img/protech.png" alt="">
+            <img id="logovpn" src="img/vpn-logo.png" alt="">
+            <p class="titleclass" style="width: 500px; font-size: 40px;">Protection for your whole device, on every
+                device</p>
+            <p>Surf, stream, game, and get work done while maintaining your privacy online.</p>
+            <button class="downloadVPN">Get Mozilla VPN</button>
+        </div>
+        <div id="pocbanner">
+            <img id="banner2" src="img/banner2.jpg" alt="">
+            <img id="pocimg" src="img/poc.png" alt="">
+            <div id="titlebaner2" style="width: 500px; font-size: 40px;">
+                <p class="titleclass">Welcome to the web, sunny side up</p>
+                <p style="font-size: 15px;">Millions of people rely on Pocket to save and discover the best articles,
+                    stories and videos on the
+                    web.
+                    As part of the Firefox family, Pocket has the same dedication to privacy.</p>
+                <button class="btn btn-primary">Try Procket</button>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+        <div id="readingbox">
+            <p>What we’re reading:</p>
+            <p>Like this feed? <u>Subscribe</u> via Pocket</p>
+            <div id="listbox" class="row">
+                <div class="readingnew col-md-3">
+                    <img src="img/smartblock.jpg" alt="">
+                    <p class="small">arstechnica.com</p>
+                    <p class="titleclass">Firefox 89 delivered more speed—today’s Firefox 90 adds SmartBlock 2.0</p>
+                </div>
+                <div class="readingnew col-md-3">
+                    <img src="img/2021.png" alt="">
+                    <p class="small">theoatmeal.com</p>
+                    <p class="titleclass">Reaching people on the internet in 2021</p>
+                </div>
+                <div class="readingnew col-md-3">
+                    <img src="img/ww.jpg" alt="">
+                    <p class="small">marketplace.org</p>
+                    <p class="titleclass">Ever watch something on YouTube and wished you hadn’t? You’re not alone.</p>
+                </div>
+                <div class="readingnew col-md-3">
+                    <img class="img-fluid" src="img/give.jpg" alt="">
+                    <p class="small">wsj.com</p>
+                    <p class="titleclass">Browser Redesigns Aim to Give Users Sleeker Experience</p>
+                </div>
+            </div>
+        </div>
+        <div id="supportbanner" class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <h1 class="titleclass" style="font-size: 45px;">Support a healthy internet.</h1>
+                <p>The non-profit Mozilla Foundation supports online privacy & security, trustworthy artificial
+                    intelligence
+                    (AI), accountability for big tech corporations, and more.</p>
+                <a href="#" style="text-align: center;">Visit the Mozilla Foundation</a>
+            </div>
+            <div class="col-md-6">
+                <img src="img/support.png" alt="">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/youtube.png" alt="">
+                <p class='small'>Report</p>
+                <h2 class="titleclass">YouTube Regrets</h2>
+                <p>Mozilla and 37,380 YouTube users conducted a study to better understand harmful YouTube
+                    recommendations. This is what we learned.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="img/ai.jpg" alt="">
+                <p class='small'>Video</p>
+                <h2 class="titleclass">Mozilla Explains: AI</h2>
+                <p>How does an algorithm train a machine learning model, and what happens next?</p>
+            </div>
+        </div>
+        <div id="powerbanner" class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <img src="img/power.png" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h1 class="titleclass" style="font-size: 45px;">More power to you.</h1>
+                <p>Mozilla puts people before profit, creating products, technologies and programs that make the
+                    internet healthier for everyone.</p>
+                <a href="#" style="text-align: center;">Learn more about us</a>
+
+
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+        <div id="listbox2" class="row">
+            <div class="readingnew col-md-3">
+                <img src="img/sim.jpg" alt="">
+                <p>Mozilla Explains</p>
+                <p>What is SIM swapping?</p>
+                <p>Get up to speed on SIM swapping scams and learn how to protect yourself from this new form of
+                    identity theft.</p>
+            </div>
+
+            <div class="readingnew col-md-3">
+                <img src="img/digi.jpg" alt="">
+                <p>Deep Dive</p>
+                <p>The digital divide</p>
+                <p>Every week we take a fun look at what’s going on in the world and on the internet from awesome to
+                    awful.</p>
+            </div>
+            <div class="readingnew col-md-3">
+                <img src="img/worse.jpg" alt="">
+                <p>Mozilla Foundation</p>
+                <p>Ever watch something on YouTube and wished you hadn’t? You’re not alone.</p>
+            </div>
+            <div class="readingnew col-md-3">
+                <img src="img/project.png" alt="">
+                <p>Pocket</p>
+                <p>The Joy List Project</p>
+                <p>Read on as our contributors walk you through their all-time essential articles, videos, recipes,
+                    poems, memes and more.</p>
+            </div>
+
+
+        </div>
+
+        <div id="inplove" class="row text-center">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <img src="img/love.png" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h1 class="titleclass" style="font-size: 40px;text-align: left;">Love the Web?</h1>
+                <p style="text-align: left;">Get the Mozilla newsletter and help us keep it open and free.</p>
+
+                <p style="text-align: left;">Your email addres</p>
+                <input type="email" class="form-control" placeholder="yourname@example.com" id="email">
+
+                <button class="downloadVPN" style="width: 100%;">Sign up now</button>
+                <p>We will only send you Mozilla-related information.</p>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+        </div>
+
+    </div>
+    <div id="privacybox" class="container-fluid row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5">
+            <h2>Privacy over profit</h2>
+            <p>No shareholders. No data for sale.</p>
+            <button class="btn btn-primary btn-lg">Download Firefox</button>
+            <p class="small" style="margin-left: 20px;object-fit: cover;">Firefox Privacy Notice</p>
+        </div>
+        <div class="col-md-6" style="display: inline;">
+            <img style="margin-top: -150px;" src="img/privacy_back.svg" alt="">
+            <img style="display:absolute; margin-top: -290px;" src="img/privacy_icon.svg" alt="">
+        </div>
+    </div>
+    <div id="menubotom" class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">Mozilla Manifesto</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Corporate Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Privacy Hub</a></li>
+                <li><a href="#">Browser Comparison</a></li>
+                <li><a href="#">Brand Standards</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Product Help</a></li>
+                <li><a href="#">File a Bug</a></li>
+            </ul>
+            
+        </div>
+        <div class="col-md-2">
+            <h3>Developers</h3>
+            <ul>
+                <li><a href="#">Developer Edition</a></li>
+                <li><a href="#">Beta</a></li>
+                <li><a href="#">Beta for Android</a></li>
+                <li><a href="#">Nightly</a></li>
+                <li><a href="#">Nightly for Android</a></li>
+                <li><a href="#">Enterprise</a></li>
+                <li><a href="#">Tools</a></li>
+            </ul>
+
+        </div>
+        <div class="col-md-2">
+            <p>Follow @Mozilla</p>
+            <p>Follow @Firefox</p>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
